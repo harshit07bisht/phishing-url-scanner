@@ -8,7 +8,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY feature_extraction.py .
 COPY app.py .
 COPY model/ ./model/
-
+COPY templates/ ./templates/
 ENV PORT=8080
 EXPOSE 8080
 
