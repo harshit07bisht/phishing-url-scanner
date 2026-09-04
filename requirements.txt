@@ -1,0 +1,14 @@
+# Core
+numpy>=1.24
+scikit-learn>=1.3
+joblib>=1.3
+
+# API (Layer 3 / 4)
+flask>=3.0
+gunicorn>=21.2          # production WSGI server for containers (Cloud Run / ECS)
+
+# Optional: better per-prediction explanations (swap into build_explanation in app.py)
+# shap>=0.44
+
+# Optional: if you deploy on AWS Lambda via Mangum instead of a container
+# mangum>=0.17
