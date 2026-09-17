@@ -109,8 +109,9 @@ def extract_features(url: str) -> dict:
     """
     url = (url or "").strip()
     if not re.match(r"^[a-zA-Z][a-zA-Z0-9+\-.]*://", url):
-        # No scheme provided (e.g. "example.com/login") -> assume http for parsing
-        parse_target = "http://" + url
+        # No scheme provided (e.g. "example.com/login") -> assume https,
+        # since that's the modern default when a bare domain is typed
+        parse_target = "https://" + url
     else:
         parse_target = url
 
